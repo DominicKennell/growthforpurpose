@@ -474,6 +474,237 @@
             color: var(--green-mid);
         }
 
+        /* Pricing Section */
+        .pricing {
+            padding: 8rem 4rem;
+            background: var(--cream-dark);
+            position: relative;
+        }
+
+        .pricing::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--green-pale), transparent);
+        }
+
+        .pricing .section-header {
+            margin-bottom: 4rem;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--cream);
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            position: relative;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid transparent;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(45, 71, 57, 0.12);
+            border-color: var(--green-pale);
+        }
+
+        .pricing-card.featured {
+            background: var(--green-deep);
+            color: var(--cream);
+            transform: scale(1.02);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.02) translateY(-8px);
+        }
+
+        .pricing-card.featured .pricing-duration,
+        .pricing-card.featured .pricing-description {
+            color: var(--green-pale);
+        }
+
+        .pricing-card.featured .pricing-price {
+            color: var(--cream);
+        }
+
+        .pricing-card.featured .pricing-per-session {
+            color: var(--green-pale);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--green-light);
+            color: var(--cream);
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .pricing-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .pricing-duration {
+            font-size: 0.85rem;
+            color: var(--green-mid);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            text-align: center;
+            color: var(--green-deep);
+            margin-bottom: 0.25rem;
+        }
+
+        .pricing-per-session {
+            font-size: 0.8rem;
+            color: var(--green-mid);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            min-height: 1.2rem;
+        }
+
+        .pricing-divider {
+            width: 40px;
+            height: 2px;
+            background: var(--green-pale);
+            margin: 0 auto 1.5rem;
+        }
+
+        .pricing-card.featured .pricing-divider {
+            background: var(--green-light);
+        }
+
+        .pricing-description {
+            font-size: 0.95rem;
+            color: var(--green-mid);
+            text-align: center;
+            line-height: 1.7;
+            flex-grow: 1;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-card .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 0.9rem 1.5rem;
+            font-size: 0.75rem;
+        }
+
+        .pricing-card.featured .btn {
+            background: var(--cream);
+            color: var(--green-deep);
+            border-color: var(--cream);
+        }
+
+        .pricing-card.featured .btn::before {
+            background: var(--green-light);
+        }
+
+        .pricing-card.featured .btn:hover {
+            color: var(--cream);
+            border-color: var(--green-light);
+        }
+
+        /* Free Discovery Call Banner */
+        .discovery-banner {
+            max-width: 900px;
+            margin: 4rem auto 0;
+            background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-mid) 100%);
+            border-radius: 20px;
+            padding: 2.5rem 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .discovery-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--green-light) 0%, transparent 70%);
+            opacity: 0.3;
+        }
+
+        .discovery-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .discovery-label {
+            display: inline-block;
+            background: var(--green-light);
+            color: var(--cream);
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .discovery-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--cream);
+            margin-bottom: 0.5rem;
+        }
+
+        .discovery-text {
+            color: var(--green-pale);
+            font-size: 0.95rem;
+        }
+
+        .discovery-banner .btn {
+            background: var(--cream);
+            color: var(--green-deep);
+            border-color: var(--cream);
+            white-space: nowrap;
+            position: relative;
+            z-index: 1;
+        }
+
+        .discovery-banner .btn::before {
+            background: var(--green-light);
+        }
+
+        .discovery-banner .btn:hover {
+            color: var(--cream);
+            border-color: var(--green-light);
+        }
+
         /* Approach Section */
         .approach {
             padding: 8rem 4rem;
@@ -650,6 +881,21 @@
         }
 
         /* Responsive */
+        @media (max-width: 1200px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .pricing-card.featured:hover {
+                transform: translateY(-8px);
+            }
+        }
+
         @media (max-width: 1024px) {
             .hero {
                 grid-template-columns: 1fr;
@@ -700,11 +946,22 @@
                 gap: 2rem;
                 text-align: center;
             }
+
+            .discovery-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+            }
         }
 
         @media (max-width: 768px) {
             .services-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
             }
 
             header nav {
@@ -718,6 +975,10 @@
 
             .visual-break-content blockquote {
                 font-size: 1.5rem;
+            }
+
+            .pricing {
+                padding: 6rem 2rem;
             }
         }
 
@@ -757,8 +1018,8 @@
             <p class="hero-tagline">Bespoke Motivational Coaching</p>
             <h1>One-size-fits-all motivation <em>rarely works</em> — especially for women juggling busy lives</h1>
             <p>At GrowthforPurpose, I offer bespoke motivational coaching, shaped around the individual rather than a generic programme. Every woman I work with receives personalised support built around her lifestyle, goals, and real-world challenges.</p>
-            <a href="mailto:growthforpurpose@gmail.com?subject=Free%20Consultation%20Request" class="btn">
-                Free Consultation
+            <a href="mailto:growthforpurpose@gmail.com?subject=Free%20Discovery%20Call%20Request" class="btn">
+                Free Discovery Call
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
@@ -837,13 +1098,93 @@
         </div>
     </section>
 
+    <section class="pricing" id="pricing">
+        <div class="section-header">
+            <h2>Investment in Yourself</h2>
+            <p>Choose the coaching option that best fits your needs and goals. Every journey is unique.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3 class="pricing-name">One-Off Session</h3>
+                <p class="pricing-duration">60 minutes</p>
+                <p class="pricing-price">£85</p>
+                <p class="pricing-per-session">&nbsp;</p>
+                <div class="pricing-divider"></div>
+                <p class="pricing-description">Perfect for a single focused conversation when you need clarity, a confidence boost, or help navigating a specific challenge.</p>
+                <a href="mailto:growthforpurpose@gmail.com?subject=Booking%20Request%20-%20One-Off%20Session" class="btn">
+                    Book Now
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="pricing-card">
+                <h3 class="pricing-name">Deep Dive</h3>
+                <p class="pricing-duration">90 minutes</p>
+                <p class="pricing-price">£120</p>
+                <p class="pricing-per-session">&nbsp;</p>
+                <div class="pricing-divider"></div>
+                <p class="pricing-description">An extended session for those who want to explore deeper patterns, set comprehensive goals, or work through multiple areas at once.</p>
+                <a href="mailto:growthforpurpose@gmail.com?subject=Booking%20Request%20-%20Deep%20Dive%20Session" class="btn">
+                    Book Now
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="pricing-card featured">
+                <span class="pricing-badge">Best Value</span>
+                <h3 class="pricing-name">Kickstarter Package</h3>
+                <p class="pricing-duration">4 sessions</p>
+                <p class="pricing-price">£280</p>
+                <p class="pricing-per-session">£70 per session</p>
+                <div class="pricing-divider"></div>
+                <p class="pricing-description">Build momentum with a structured coaching block. Ideal for establishing new habits, working through transitions, or kickstarting lasting change.</p>
+                <a href="mailto:growthforpurpose@gmail.com?subject=Booking%20Request%20-%20Kickstarter%20Package" class="btn">
+                    Get Started
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="pricing-card">
+                <h3 class="pricing-name">Continued Growth</h3>
+                <p class="pricing-duration">Ongoing support</p>
+                <p class="pricing-price">£70</p>
+                <p class="pricing-per-session">per session</p>
+                <div class="pricing-divider"></div>
+                <p class="pricing-description">For those who've completed a package and want to maintain momentum. Flexible, ongoing coaching at a reduced rate.</p>
+                <a href="mailto:growthforpurpose@gmail.com?subject=Booking%20Request%20-%20Continued%20Growth" class="btn">
+                    Continue
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="discovery-banner">
+            <div class="discovery-content">
+                <span class="discovery-label">Start Here</span>
+                <h3 class="discovery-title">Free Discovery Call</h3>
+                <p class="discovery-text">Not sure where to begin? Let's have a no-obligation chat about your goals and how coaching could help.</p>
+            </div>
+            <a href="mailto:growthforpurpose@gmail.com?subject=Free%20Discovery%20Call%20Request" class="btn">
+                Book Free Call
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </section>
+
     <section class="approach" id="approach">
         <div class="approach-content">
             <h2>My Approach</h2>
             <p>I don't provide fitness or nutrition plans. Instead, I work alongside Personal Trainers and nutrition professionals to support the behavioural and mindset side of change.</p>
             <p>Every woman I work with receives personalised support built around her lifestyle, goals, and real-world challenges — helping women stay accountable, build confidence, and follow through.</p>
-            <a href="mailto:growthforpurpose@gmail.com?subject=Free%20Consultation%20Request" class="btn">
-                Book Your Free Consultation
+            <a href="mailto:growthforpurpose@gmail.com?subject=Free%20Discovery%20Call%20Request" class="btn">
+                Book Your Free Discovery Call
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
@@ -863,9 +1204,9 @@
 
     <section class="cta">
         <h2>Ready to Begin?</h2>
-        <p>Take the first step towards lasting change. Book your free consultation today and discover how bespoke motivational coaching can transform your journey.</p>
-        <a href="mailto:growthforpurpose@gmail.com?subject=Free%20Consultation%20Request" class="btn">
-            Click Now for a Free Consultation
+        <p>Take the first step towards lasting change. Book your free discovery call today and discover how bespoke motivational coaching can transform your journey.</p>
+        <a href="mailto:growthforpurpose@gmail.com?subject=Free%20Discovery%20Call%20Request" class="btn">
+            Click Now for a Free Discovery Call
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
@@ -878,7 +1219,7 @@
         </div>
         <p>© 2025 GrowthforPurpose. Bespoke Motivational Coaching for Women.</p>
         <nav>
-            <a href="mailto:growthforpurpose@gmail.com?subject=Free%20Consultation%20Request">Contact</a>
+            <a href="mailto:growthforpurpose@gmail.com?subject=Free%20Discovery%20Call%20Request">Contact</a>
         </nav>
     </footer>
 </body>
